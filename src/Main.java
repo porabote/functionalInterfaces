@@ -5,20 +5,19 @@ public class Main {
         Calculator calc = Calculator.instance.get();
 
         int a = calc.plus.apply(1, 2);
-        int b = calc.minus.apply(0,1);
+        int b = calc.minus.apply(1, 1);
 
         // Нельзя делить на ноль
-        if (b > 0) {
-            int c = calc.devide.apply(a, b);
-            calc.println.accept(c);
-        }
+        int c = calc.devide.apply(a, b);
+        calc.println.accept(c);
+
 
         // Worker
-        Worker.OnTaskDoneListener listener = System.out::println;
-        Worker.OnTaskErrorListener errorCallback = System.out::println;
-
-        Worker worker = new Worker(listener, errorCallback);
-        worker.start();
+//        Worker.OnTaskDoneListener listener = System.out::println;
+//        Worker.OnTaskErrorListener errorCallback = System.out::println;
+//
+//        Worker worker = new Worker(listener, errorCallback);
+//        worker.start();
 
     }
 }
