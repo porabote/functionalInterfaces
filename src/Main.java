@@ -13,11 +13,11 @@ public class Main {
 
 
         // Worker
-//        Worker.OnTaskDoneListener listener = System.out::println;
-//        Worker.OnTaskErrorListener errorCallback = System.out::println;
-//
-//        Worker worker = new Worker(listener, errorCallback);
-//        worker.start();
+        Worker.OnTaskDoneListener listener = System.out::println;
+        Worker.OnTaskErrorListener errorCallback = System.out::println;
+
+        Worker worker = new Worker(listener, errorCallback);
+        worker.start();
 
     }
 }
